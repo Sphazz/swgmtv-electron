@@ -1,0 +1,45 @@
+{
+  "name": "swg-mtv",
+  "version": "1.0.0",
+  "description": "Image collection of all mobile templates using MTG mobiles.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "build --win --ia32",
+    "build-linux": "build --linux --x64",
+    "build-mac": "build --mac --x64"
+  },
+  "repository": "https://github.com/Sphazz/swgmtv-electron",
+  "homepage": "https://swgsremu.com/swgmtv/",
+  "keywords": [
+    "swg",
+    "swgmtv",
+    "star",
+    "wars",
+    "galaxies",
+    "mobiles",
+    "gallery",
+    "templates"
+  ],
+  "author": "Sphazz (Tyclo)",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^4.0.1",
+    "electron-builder": "^20.38.5"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "build": {
+    "productName": "SWG Mobile Template Viewer",
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "perMachine": true
+    }
+  }
+}

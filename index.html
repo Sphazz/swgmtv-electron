@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SWG Mobile Template Viewer</title>
+  <meta name="description" content="Star Wars Galaxies Mobile Template Viewer tool. Image listing of all SOE defined appearances in Star Wars Galaxes.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#182b2f">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#182b2f">
+  <link rel="icon" sizes="128x128" href="./imgs/swg-mtv-icon.png">
+
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script>
+    try {
+      $ = jQuery = module.exports;
+    } catch(e) {}
+  </script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="title-bar">
+    <div class="title-button-wrap">
+      <span id="menuMinimize" class="title-button">
+        <svg width="12" height="12" viewBox="0 0 12 12"><rect fill="#ffffff" width="10" height="1" x="1" y="6"></rect></svg>
+      </span>
+      <span id="menuMaximize" class="title-button">
+        <svg width="12" height="12" viewBox="0 0 12 12"><rect width="9" height="9" x="1.5" y="1.5" fill="none" stroke="#ffffff"></rect></svg>
+      </span>
+      <span id="menuClose" class="title-button">
+        <svg width="12" height="12" viewBox="0 0 12 12"><polygon fill="#ffffff" fill-rule="evenodd" points="11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1"></polygon></svg>
+      </span>
+    </div>
+  </div>
+  
+  <nav id="nav-top" class="navbar navbar-fixed-top" role="navigation">
+    <img src="imgs/swg-mtv-logo.png" class="swg-logo" alt="Star Wars Galaxies Mobile Template Viewer">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="cate-nav nav-folders">
+          <li><a class="cate-button" data-cate="dressed">dressed</a></li>
+          <li><a class="cate-button" data-cate="ep3">ep3</a></li>
+          <li><a class="cate-button" data-cate="npe">npe</a></li>
+          <li><a class="cate-button" data-cate="som">som</a></li>
+        </ul>
+        <ul class="cate-nav nav-categories">
+          <li><a class="cate-button active" data-cate="1">1</a></li>
+          <li><a class="cate-button" data-cate="2">2</a></li>
+          <li><a class="cate-button" data-cate="3">3</a></li>
+          <li><a class="cate-button" data-cate="4">4</a></li>
+          <li><a class="cate-button" data-cate="8">8</a></li>
+          <li><a class="cate-button" data-cate="a">a</a></li>
+          <li><a class="cate-button" data-cate="b">b</a></li>
+          <li><a class="cate-button" data-cate="c">c</a></li>
+          <li><a class="cate-button" data-cate="d">d</a></li>
+          <li><a class="cate-button" data-cate="e">e</a></li>
+          <li><a class="cate-button" data-cate="f">f</a></li>
+          <li><a class="cate-button" data-cate="g">g</a></li>
+          <li><a class="cate-button" data-cate="h">h</a></li>
+          <li><a class="cate-button" data-cate="i">i</a></li>
+          <li><a class="cate-button" data-cate="j">j</a></li>
+          <li><a class="cate-button" data-cate="k">k</a></li>
+          <li><a class="cate-button" data-cate="l">l</a></li>
+          <li><a class="cate-button" data-cate="m">m</a></li>
+          <li><a class="cate-button" data-cate="n">n</a></li>
+          <li><a class="cate-button" data-cate="o">o</a></li>
+          <li><a class="cate-button" data-cate="p">p</a></li>
+          <li><a class="cate-button" data-cate="q">q</a></li>
+          <li><a class="cate-button" data-cate="r">r</a></li>
+          <li><a class="cate-button" data-cate="s">s</a></li>
+          <li><a class="cate-button" data-cate="t">t</a></li>
+          <li><a class="cate-button" data-cate="u">u</a></li>
+          <li><a class="cate-button" data-cate="v">v</a></li>
+          <li><a class="cate-button" data-cate="w">w</a></li>
+          <li><a class="cate-button" data-cate="x">x</a></li>
+          <li><a class="cate-button" data-cate="y">y</a></li>
+          <li><a class="cate-button" data-cate="z">z</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav id="nav-side" class="navbar navbar-side" role="navigation">
+    <div class="swg-logo-mobile-wrap">
+      <img src="imgs/swg-mtv-logo.png" class="swg-logo-mobile" alt="Star Wars Galaxies Mobile Template Viewer">
+      <div class="sidebar-credits">
+        <div>
+          Developed by Tyclo of <a href="https://www.swgsremu.com/" class="external-link">Sentinels Republic</a>
+        </div>
+        <div>
+          <a href="https://github.com/Sphazz/swgmtv/tree/master" class="external-link">Public Repository</a> - <span class="version-wrap">Version: <span class="version"></span></span>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-item sidebar-category">
+      <h4><span id="resultsType">Category:</span> <strong class="cateName"></strong> (<span class="cateLength"></span>)</h4>
+    </div>
+    <div class="sidebar-item search-group">
+      <div class="input-group">
+        <input type="text" id="searchBox" class="form-control" placeholder="Search">
+        <span class="input-group-btn">
+          <button id="searchMobiles" class="sidebar-button">Go</button>
+        </span>
+      </div>
+    </div>
+    <div class="sidebar-item sidebar-view">
+      <div id="viewType" class="btn-group" role="group" aria-label="view-type">
+        <button type="button" id="gridView" class="btn sidebar-button" disabled><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Grid</button>
+        <button type="button" id="listView" class="btn sidebar-button"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> List</button>
+      </div>
+    </div>
+    <div class="sidebar-item sidebar-credits">
+      <div>
+        Developed by Tyclo of <a href="https://www.swgsremu.com/" class="external-link">Sentinels Republic</a>
+      </div>
+      <div>
+        <a href="https://github.com/Sphazz/swgmtv/tree/master" class="external-link">Public Repository</a> - <span class="version-wrap">Version: <span class="version"></span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div id="main-container" class="main-container container">
+    <div id="mobile-wrapper" class="container">
+      <div id="mobile-container" class="row"></div>
+      <button type="button" id="loadMore" class="btn btn-default loadMore">Load More</button>
+    </div>
+  </div>
+
+  <div id="toTop"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></div>
+
+  <div class="modal fade" id="viewFull" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 id="modalTitle" class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <div id="modalScreenshot"></div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <script type="text/javascript" src="./renderer.js"></script>
+  <script type="text/javascript" src="./js/npcs.js"></script>
+  <script type="text/javascript" src="./js/scripts.js"></script>
+</body>
+</html>
