@@ -1,8 +1,6 @@
-// Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow} = require('electron');
+const {autoUpdater} = require('electron-updater');
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
 function createWindow() {
@@ -17,7 +15,7 @@ function createWindow() {
     icon: './imgs/swg-mtv-logo-128.png',
   });
   mainWindow.loadFile('index.html');
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
   mainWindow.once('ready-to-show', () => mainWindow.show());
   mainWindow.once('closed', () => mainWindow = null);
 }
@@ -28,10 +26,19 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
     app.quit()
   }
-})
+});
 
 app.on('activate', function () {
   if (mainWindow === null) {
-    createWindow()
+    createWindow();
   }
-})
+});
+
+autoUpdater.on('update-downloaded', (info) => {
+  autoUpdater.quitAndInstall();
+});
+
+app.on('ready', function()  {
+  if (!require('electron-is-dev'))
+    autoUpdater.checkForUpdates();
+});
